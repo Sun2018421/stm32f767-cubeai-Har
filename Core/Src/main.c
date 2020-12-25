@@ -86,7 +86,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-	printf("hello world\r\n");
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -109,6 +108,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	
   while (1)
   {
     /* USER CODE END WHILE */

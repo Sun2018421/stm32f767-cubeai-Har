@@ -224,11 +224,11 @@ Section Cross References
     main.o(i.fputc) refers to stm32f7xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
     main.o(i.fputc) refers to main.o(.bss) for .bss
     main.o(i.main) refers to stm32f7xx_hal.o(i.HAL_Init) for HAL_Init
-    main.o(i.main) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
     main.o(i.main) refers to stm32f7xx_hal_crc.o(i.HAL_CRC_Init) for HAL_CRC_Init
     main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Init) for MX_X_CUBE_AI_Init
     main.o(i.main) refers to main.o(i.MX_USART3_UART_Init) for MX_USART3_UART_Init
+    main.o(i.main) refers to printfa.o(i.__0printf) for __2printf
     main.o(i.main) refers to app_x-cube-ai.o(i.MX_X_CUBE_AI_Process) for MX_X_CUBE_AI_Process
     main.o(i.main) refers to main.o(.bss) for .bss
     stm32f7xx_it.o(i.SysTick_Handler) refers to stm32f7xx_hal.o(i.HAL_IncTick) for HAL_IncTick
