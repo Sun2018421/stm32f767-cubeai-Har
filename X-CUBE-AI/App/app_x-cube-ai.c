@@ -71,7 +71,7 @@ static ai_buffer ai_output[AI_HARGITHUB_OUT_NUM] = AI_HARGITHUB_OUT ;
  AI_ALIGNED(4)
  static ai_u8 activations[AI_HARGITHUB_DATA_ACTIVATIONS_SIZE];
  
-#define testsize 270*4
+#define testsize 270*6
  extern uint8_t tempbuf[testsize];
 /*
  * Init function to create and initialize a NN.
@@ -718,7 +718,12 @@ void MX_X_CUBE_AI_Process(void)
 	
 	ai_float in_data [270];
 	for(i=0 ; i<270 ;i++){
-		in_data[i] = (tempbuf[i*4]-'0')+(tempbuf[i*4+2]-'0')*0.1 + (tempbuf[i*4+3]-'0')*0.01;
+		if(tempbuf[i*6]=='+'){
+				in_data[i] = (tempbuf[i*6+1]-'0')*10+(tempbuf[i*6+2]-'0')+(tempbuf[i*6+4]-'0')*0.1 + (tempbuf[i*6+5]-'0')*0.01;
+		}
+		else{
+				in_data[i] = -((tempbuf[i*6+1]-'0')*10+(tempbuf[i*6+2]-'0')+(tempbuf[i*6+4]-'0')*0.1 + (tempbuf[i*6+5]-'0')*0.01);
+		}
 	//	printf("%.2f\r\n",in_data[i]);
 	}
 	/*

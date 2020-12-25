@@ -57,7 +57,7 @@ static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
 void MX_USART3_UART_Init(void);
 void MX_USART1_UART_Init(void);
-#define testsize 270*4
+#define testsize 270*6
  uint8_t tempbuf[testsize];
 /* USER CODE BEGIN PFP */
 
